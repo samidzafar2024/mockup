@@ -116,6 +116,51 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 .hero-scroll-bar { width: 1px; height: 44px; background: linear-gradient(to bottom, rgba(200,135,58,0.6), transparent); animation: pulse 2s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:0.35}50%{opacity:1} }
 
+/* Hero phoenix float */
+.hero-phoenix { animation: floatPhoenix 8s ease-in-out infinite; }
+@keyframes floatPhoenix { 0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.055; } 50% { transform: translateY(calc(-50% - 12px)) scale(1.02); opacity: 0.08; } }
+
+/* Scroll-triggered reveal (JS adds .in-view) */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Stagger children when parent gets .in-view */
+.reveal-stagger .reveal { transition-delay: 0s; }
+.reveal-stagger.in-view .reveal:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.in-view .reveal:nth-child(2) { transition-delay: 0.06s; }
+.reveal-stagger.in-view .reveal:nth-child(3) { transition-delay: 0.12s; }
+.reveal-stagger.in-view .reveal:nth-child(4) { transition-delay: 0.18s; }
+.reveal-stagger.in-view .reveal:nth-child(5) { transition-delay: 0.24s; }
+.reveal-stagger.in-view .reveal:nth-child(6) { transition-delay: 0.3s; }
+.reveal-stagger.in-view .reveal:nth-child(7) { transition-delay: 0.36s; }
+.reveal-stagger.in-view .reveal:nth-child(8) { transition-delay: 0.42s; }
+.reveal-stagger.in-view .reveal:nth-child(9) { transition-delay: 0.48s; }
+.reveal-stagger.in-view .reveal:nth-child(10) { transition-delay: 0.54s; }
+
+/* Fade-in from left for variety */
+.reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+.reveal-left.in-view { opacity: 1; transform: translateX(0); }
+
+/* Scale-in for cards */
+.reveal-scale { opacity: 0; transform: scale(0.96); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+.reveal-scale.in-view { opacity: 1; transform: scale(1); }
+
+/* Accent line draw-in */
+.hero-accent-line { transform: scaleY(0); transform-origin: top; animation: drawLine 1s 0.6s var(--ease) forwards; }
+@keyframes drawLine { to { transform: scaleY(1); } }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-scale { opacity: 1; transform: none; transition: none; }
+  .hero-phoenix { animation: none; }
+  .hero-accent-line { animation: none; transform: scaleY(1); }
+}
+
 /* MANIFESTO */
 .manifesto { background: var(--parchment-w); padding: 80px 0; position: relative; overflow: hidden; border-bottom: 1px solid var(--sand); }
 .manifesto::after { content: '\201C'; position: absolute; top: -80px; left: 3%; font-family: var(--serif); font-size: 28rem; color: var(--ember); opacity: 0.035; line-height: 1; pointer-events: none; }
@@ -442,7 +487,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 
 <!-- MANIFESTO -->
 <section class="manifesto">
-  <div class="manifesto-inner">
+  <div class="manifesto-inner reveal">
     <span class="eyebrow">Notre engagement</span>
     <h2>Un accident, c'est un avant et un après.<br><em>Vous ne devriez pas traverser ça seul.</em></h2>
     <p>Plume de Phoenix est un cabinet d'avocat spécialiste dans la défense des victimes d'accidents et d'infractions — engagé, humaniste, cultivant l'excellence, la bienveillance et la ténacité. Présent dans toute la France et à l'international.</p>
@@ -451,48 +496,48 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 
 <!-- CNB STRIP -->
 <div class="cnb-strip">
-  <div class="cnb-strip-inner">
-    <div class="cnb-item"><span class="cnb-item-icon">🏛️</span><div class="cnb-item-text"><strong>Spécialiste CNB (titre protégé)</strong>Conseil National des Barreaux</div></div>
+  <div class="cnb-strip-inner reveal reveal-stagger">
+    <div class="cnb-item reveal"><span class="cnb-item-icon">🏛️</span><div class="cnb-item-text"><strong>Spécialiste CNB (titre protégé)</strong>Conseil National des Barreaux</div></div>
     <div class="cnb-sep"></div>
-    <div class="cnb-item"><span class="cnb-item-icon">🎓</span><div class="cnb-item-text"><strong>Diplômée traumatisme crânien</strong>Enfant, adolescent &amp; bébé secoué</div></div>
+    <div class="cnb-item reveal"><span class="cnb-item-icon">🎓</span><div class="cnb-item-text"><strong>Diplômée traumatisme crânien</strong>Enfant, adolescent &amp; bébé secoué</div></div>
     <div class="cnb-sep"></div>
-    <div class="cnb-item"><span class="cnb-item-icon">⚖️</span><div class="cnb-item-text"><strong>15+ ans d'expérience</strong>Exclusivement au service des victimes</div></div>
+    <div class="cnb-item reveal"><span class="cnb-item-icon">⚖️</span><div class="cnb-item-text"><strong>15+ ans d'expérience</strong>Exclusivement au service des victimes</div></div>
     <div class="cnb-sep"></div>
-    <div class="cnb-item"><span class="cnb-item-icon">🌍</span><div class="cnb-item-text"><strong>France entière &amp; international</strong>Enghien · Paris · Dom-Tom · Visio</div></div>
+    <div class="cnb-item reveal"><span class="cnb-item-icon">🌍</span><div class="cnb-item-text"><strong>France entière &amp; international</strong>Enghien · Paris · Dom-Tom · Visio</div></div>
   </div>
 </div>
 
 <!-- EXPERTISES -->
 <section class="expertise" id="expertises">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Domaines d'intervention</span>
       <h2>Une défense spécialisée<br><em style="font-style:italic;color:var(--ember)">pour chaque victime</em></h2>
       <p>Maître Pannagas défend toutes les victimes de dommages corporels graves, des accidents les plus courants aux situations les plus complexes et sensibles.</p>
     </div>
 
-    <div class="exp-grid">
-      <article class="exp-card">
+    <div class="exp-grid reveal-stagger">
+      <article class="exp-card reveal">
         <div class="exp-priority">Priorité</div>
         <span class="exp-icon">🚗</span>
         <h3>Accident de la route grave</h3>
         <p>Victimes de collisions, piétons renversés, passagers blessés. Loi Badinter, FGAO, indemnisation maximale.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <div class="exp-priority">Priorité</div>
         <span class="exp-icon">🧠</span>
         <h3>Traumatisme crânien</h3>
         <p>Séquelles cognitives invisibles, expertise médicale contradictoire, indemnisation tierce personne et aidants.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">👶</span>
         <h3>Syndrome du bébé secoué</h3>
         <p>Diplôme spécifique. Défense des tout-petits victimes de violences. Accompagnement des familles.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">🔥</span>
         <h3>Grands brûlés &amp; familles</h3>
         <p>Indemnisation des victimes de brûlures graves. Victimes françaises à l'étranger (Crans-Montana).</p>
@@ -500,26 +545,26 @@ footer { background: var(--forest); padding: 56px 0 24px; }
       </article>
     </div>
 
-    <div class="exp-grid">
-      <article class="exp-card">
+    <div class="exp-grid reveal-stagger">
+      <article class="exp-card reveal">
         <span class="exp-icon">🏥</span>
         <h3>Accident médical</h3>
         <p>Erreurs médicales, infections nosocomiales, responsabilité hospitalière, recours ONIAM.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">⚖️</span>
         <h3>Victimes d'infractions</h3>
         <p>Agressions, homicides, viols, soumission chimique. Partie civile, FGTI, réparation intégrale.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">🌸</span>
         <h3>Féminicide &amp; violences VIF/VSS</h3>
         <p>Violences intrafamiliales, conjugales, sexuelles. Accompagnement des survivantes et des familles.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">💼</span>
         <h3>Accident du travail</h3>
         <p>Faute inexcusable de l'employeur, indemnisation complémentaire au-delà des prestations sociales.</p>
@@ -527,20 +572,20 @@ footer { background: var(--forest); padding: 56px 0 24px; }
       </article>
     </div>
 
-    <div class="exp-grid exp-grid-3">
-      <article class="exp-card">
+    <div class="exp-grid exp-grid-3 reveal-stagger">
+      <article class="exp-card reveal">
         <span class="exp-icon">🎿</span>
         <h3>Accidents de ski</h3>
         <p>Collisions sur les pistes, remontées mécaniques, domaine skiable. France et international.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">💣</span>
         <h3>Victimes d'attentats</h3>
         <p>Terrorisme en France et à l'étranger. FGTI, UNCA, accompagnement psycho-traumatologique.</p>
         <a href="#contact" class="exp-link">Nous contacter →</a>
       </article>
-      <article class="exp-card">
+      <article class="exp-card reveal">
         <span class="exp-icon">✈️</span>
         <h3>Accidents France &amp; étranger</h3>
         <p>Victimes françaises à l'étranger, accidents individuels ou collectifs, droit international.</p>
@@ -554,7 +599,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 <section class="lawyer" id="avocat">
   <div class="container">
     <div class="lawyer-grid">
-      <div class="lawyer-portrait-wrap" aria-hidden="true">
+      <div class="lawyer-portrait-wrap reveal-left" aria-hidden="true">
         <div class="lawyer-portrait">
           <div class="lawyer-portrait-inner">
             <div class="portrait-initial">SP</div>
@@ -567,7 +612,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
         </div>
       </div>
 
-      <div class="lawyer-text">
+      <div class="lawyer-text reveal">
         <span class="eyebrow">Votre avocate</span>
         <h2>Maître <em>Swéta Pannagas</em></h2>
         <p class="lawyer-sub">Avocate spécialiste en dommage corporel · Barreau de Paris</p>
@@ -593,32 +638,32 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 <!-- PROCESS -->
 <section class="process" id="demarche">
   <div class="container">
-    <div class="process-head">
+    <div class="process-head reveal">
       <span class="eyebrow">Notre démarche</span>
       <h2>Votre accompagnement, <em style="font-style:italic">étape par étape</em></h2>
     </div>
-    <ol class="process-track">
-      <li class="process-step">
+    <ol class="process-track reveal-stagger">
+      <li class="process-step reveal">
         <div class="step-circle"><span>1</span></div>
         <h4>Contact gratuit</h4>
         <p>Échange confidentiel pour évaluer votre dossier, sans frais ni engagement.</p>
       </li>
-      <li class="process-step">
+      <li class="process-step reveal">
         <div class="step-circle"><span>2</span></div>
         <h4>Analyse du dossier</h4>
         <p>Collecte des pièces médicales, de police et assurance pour un dossier solide.</p>
       </li>
-      <li class="process-step">
+      <li class="process-step reveal">
         <div class="step-circle"><span>3</span></div>
         <h4>Expertise médicale</h4>
         <p>Présence à vos côtés lors des expertises pour défendre votre préjudice réel.</p>
       </li>
-      <li class="process-step">
+      <li class="process-step reveal">
         <div class="step-circle"><span>4</span></div>
         <h4>Négociation / Tribunal</h4>
         <p>Négociation ferme ou procédure judiciaire pour obtenir la juste indemnisation.</p>
       </li>
-      <li class="process-step">
+      <li class="process-step reveal">
         <div class="step-circle"><span>5</span></div>
         <h4>Réparation intégrale</h4>
         <p>Versement de l'indemnité complète — corporel, moral, économique, futur.</p>
@@ -630,20 +675,20 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Questions fréquentes</span>
       <h2>Vos questions, <em style="font-style:italic;color:var(--ember)">nos réponses</em></h2>
       <p>Ce que nous demandent le plus souvent les victimes et leurs proches.</p>
     </div>
-    <div class="faq-grid">
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Combien puis-je obtenir après un accident de la route grave ?</h4><p>L'indemnisation dépend des préjudices : déficit fonctionnel, perte de revenus, préjudice moral, soins futurs… Elle peut être bien supérieure à l'offre initiale de l'assureur.</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>L'assurance m'a fait une offre — dois-je accepter ?</h4><p>Non, jamais sans avis d'un avocat spécialisé. Les premières offres des assureurs sous-évaluent systématiquement les préjudices. Un spécialiste CNB obtient généralement bien plus.</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Qu'est-ce que le titre de spécialiste CNB ?</h4><p>Titre protégé délivré par le Conseil National des Barreaux. Maître Pannagas est reconnue spécialiste en dommage corporel avec qualification accidents de la route — un gage de sérieux unique.</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Comment prouver les séquelles d'un traumatisme crânien ?</h4><p>Par des bilans neuropsychologiques, IRM fonctionnels et un médecin conseil. Notre spécialité : documenter et défendre les séquelles cognitives peu visibles mais invalidantes.</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Mon bébé a été secoué — que faire en urgence ?</h4><p>Consultez immédiatement les urgences et demandez un scanner. Contactez-nous rapidement : la prescription commence tôt et il faut préserver toutes les preuves médicales.</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Intervenez-vous pour des victimes françaises à l'étranger ?</h4><p>Oui. Maître Pannagas intervient pour les victimes françaises accidentées à l'étranger, y compris dans des affaires collectives (victimes de Crans-Montana).</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Quels sont vos honoraires ?</h4><p>Solutions adaptées à chaque situation, y compris des honoraires de résultat pour les victimes sans moyens d'avance. Première consultation toujours gratuite.</p></div>
-      <div class="faq-item"><span class="faq-plus">+</span><h4>Quel est le délai de prescription pour agir ?</h4><p>Variable selon les cas — en général 10 ans à compter de la consolidation, mais certains délais sont plus courts. Ne tardez pas à consulter pour préserver vos droits.</p></div>
+    <div class="faq-grid reveal-stagger">
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Combien puis-je obtenir après un accident de la route grave ?</h4><p>L'indemnisation dépend des préjudices : déficit fonctionnel, perte de revenus, préjudice moral, soins futurs… Elle peut être bien supérieure à l'offre initiale de l'assureur.</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>L'assurance m'a fait une offre — dois-je accepter ?</h4><p>Non, jamais sans avis d'un avocat spécialisé. Les premières offres des assureurs sous-évaluent systématiquement les préjudices. Un spécialiste CNB obtient généralement bien plus.</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Qu'est-ce que le titre de spécialiste CNB ?</h4><p>Titre protégé délivré par le Conseil National des Barreaux. Maître Pannagas est reconnue spécialiste en dommage corporel avec qualification accidents de la route — un gage de sérieux unique.</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Comment prouver les séquelles d'un traumatisme crânien ?</h4><p>Par des bilans neuropsychologiques, IRM fonctionnels et un médecin conseil. Notre spécialité : documenter et défendre les séquelles cognitives peu visibles mais invalidantes.</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Mon bébé a été secoué — que faire en urgence ?</h4><p>Consultez immédiatement les urgences et demandez un scanner. Contactez-nous rapidement : la prescription commence tôt et il faut préserver toutes les preuves médicales.</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Intervenez-vous pour des victimes françaises à l'étranger ?</h4><p>Oui. Maître Pannagas intervient pour les victimes françaises accidentées à l'étranger, y compris dans des affaires collectives (victimes de Crans-Montana).</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Quels sont vos honoraires ?</h4><p>Solutions adaptées à chaque situation, y compris des honoraires de résultat pour les victimes sans moyens d'avance. Première consultation toujours gratuite.</p></div>
+      <div class="faq-item reveal"><span class="faq-plus">+</span><h4>Quel est le délai de prescription pour agir ?</h4><p>Variable selon les cas — en général 10 ans à compter de la consolidation, mais certains délais sont plus courts. Ne tardez pas à consulter pour préserver vos droits.</p></div>
     </div>
     <p class="faq-note">Ces réponses sont informatives. Chaque situation est unique — consultez Maître Pannagas pour une analyse personnalisée.</p>
   </div>
@@ -652,23 +697,23 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 <!-- TESTIMONIALS — real quotes from plumedephoenix.com -->
 <section class="testimonials" id="temoignages">
   <div class="container">
-    <div class="t-head">
+    <div class="t-head reveal">
       <span class="eyebrow">Témoignages clients</span>
       <h2>Ils nous ont fait confiance</h2>
       <p>Les mots de nos clients sont notre plus belle récompense.</p>
     </div>
-    <div class="t-grid">
-      <article class="t-card">
+    <div class="t-grid reveal-stagger">
+      <article class="t-card reveal">
         <div class="t-stars">★★★★★</div>
         <blockquote class="t-text">« Maître Pannagas est tout simplement une avocate d'exception. Elle est restée patiente, positive, encourageante, à l'écoute et surtout pugnace avec intelligence. C'est grâce à elle que je peux enfin recouvrer dignité et liberté à 50 ans. »</blockquote>
         <div class="t-author"><div class="t-avatar">I</div><div><div class="t-name">Isabelle G.</div><div class="t-case">Victime · Procédure longue et complexe</div></div></div>
       </article>
-      <article class="t-card">
+      <article class="t-card reveal">
         <div class="t-stars">★★★★★</div>
         <blockquote class="t-text">« Je n'avais pas beaucoup de moyens. L'avocate a trouvé une solution pour que je la paye en partie après le résultat. Je n'ai jamais cru que j'allais gagner autant d'argent ! C'est vraiment une très bonne avocate qui comprend bien les victimes. »</blockquote>
         <div class="t-author"><div class="t-avatar">V</div><div><div class="t-name">Vaira TH.</div><div class="t-case">Victime d'agression · Paris</div></div></div>
       </article>
-      <article class="t-card">
+      <article class="t-card reveal">
         <div class="t-stars">★★★★★</div>
         <blockquote class="t-text">« Swéta Pannagas est très professionnelle, tenace, qui va au fond des dossiers, ce qui a permis de découvrir des informations qui ont eu des conséquences très positives. Je me félicite d'avoir changé d'avocat. Je recommande. »</blockquote>
         <div class="t-author"><div class="t-avatar">C</div><div><div class="t-name">Christiane H.</div><div class="t-case">Dommage corporel · Dossier complexe</div></div></div>
@@ -687,12 +732,12 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 <!-- NEWS — real articles -->
 <section class="news-strip">
   <div class="container">
-    <div class="news-head">
+    <div class="news-head reveal">
       <h2>Actualités <em style="font-style:italic;color:var(--ember)">&amp; médias</em></h2>
       <a href="#">Toutes les actualités →</a>
     </div>
-    <div class="news-grid">
-      <article class="news-card">
+    <div class="news-grid reveal-stagger">
+      <article class="news-card reveal">
         <div class="news-card-img">⚖️</div>
         <div class="news-card-body">
           <div class="news-card-date">15 Janvier 2026</div>
@@ -700,7 +745,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
           <p>Vidéo explicative : les démarches juridiques pour l'accompagnement des familles françaises victimes du drame.</p>
         </div>
       </article>
-      <article class="news-card">
+      <article class="news-card reveal">
         <div class="news-card-img">👶</div>
         <div class="news-card-body">
           <div class="news-card-date">18 Novembre 2025</div>
@@ -708,7 +753,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
           <p>Comprendre la violence du geste, les lésions irréversibles et les recours judiciaires disponibles.</p>
         </div>
       </article>
-      <article class="news-card">
+      <article class="news-card reveal">
         <div class="news-card-img">🧠</div>
         <div class="news-card-body">
           <div class="news-card-date">7 Novembre 2025</div>
@@ -724,7 +769,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-grid">
-      <div class="contact-info">
+      <div class="contact-info reveal">
         <span class="eyebrow">Prenez contact</span>
         <h2>Parlons de <em>votre situation</em></h2>
         <p>La première étape est souvent la plus difficile. Notre équipe est à votre écoute pour analyser votre dossier et vous orienter — en toute confidentialité, sans engagement.</p>
@@ -755,7 +800,7 @@ footer { background: var(--forest); padding: 56px 0 24px; }
         </div>
       </div>
 
-      <div class="contact-form-wrap">
+      <div class="contact-form-wrap reveal-left">
         <h3>Demande de consultation</h3>
         <p>Réponse sous 24h. Première consultation gratuite.</p>
         <div style="margin-bottom:1.3rem">
@@ -901,5 +946,20 @@ footer { background: var(--forest); padding: 56px 0 24px; }
   </div>
 </aside>
 
+<script>
+(function() {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale, .reveal-stagger');
+  if (!els.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+  els.forEach(function(el) { observer.observe(el); });
+})();
+</script>
 </body>
 </html>
