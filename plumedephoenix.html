@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plume de Phoenix – Maître Swéta Pannagas | Avocate spécialiste dommage corporel – Enghien-les-Bains & Paris</title>
+<meta name="description" content="Maître Swéta Pannagas, avocate spécialiste en dommage corporel (titre CNB). Victimes d'accidents graves, traumatismes crâniens, bébé secoué, grands brûlés, infractions. Enghien-les-Bains & Paris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:      #0F1F1A;
+  --forest-mid:  #162820;
+  --forest-lt:   #1E3830;
+  --ember:       #C8873A;
+  --ember-light: #E5A85C;
+  --ember-pale:  #F5DDB8;
+  --parchment:   #FAF6EE;
+  --parchment-w: #F3EDE0;
+  --sand:        #E8DEC8;
+  --text-dark:   #1A1F1C;
+  --text-mid:    #3A4A40;
+  --text-soft:   #6B7A70;
+  --white:       #FFFFFF;
+  --serif:       'Playfair Display', Georgia, serif;
+  --sans:        'DM Sans', system-ui, sans-serif;
+  --r:           4px;
+  --ease:        cubic-bezier(0.4, 0, 0.2, 1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--parchment); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+h1,h2,h3,h4 { font-family: var(--serif); font-weight: 400; line-height: 1.18; }
+h1 { font-size: clamp(2.6rem, 5.5vw, 4.8rem); }
+h2 { font-size: clamp(1.9rem, 3.8vw, 3rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+p  { font-size: 1rem; line-height: 1.78; }
+.eyebrow { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ember); }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 14px 32px; border-radius: var(--r); transition: all 0.3s var(--ease); cursor: pointer; border: none; position: relative; overflow: hidden; }
+.btn-ember { background: var(--ember); color: var(--white); }
+.btn-ember::before { content: ''; position: absolute; inset: 0; background: var(--ember-light); transform: translateX(-101%); transition: transform 0.35s var(--ease); }
+.btn-ember:hover::before { transform: translateX(0); }
+.btn-ember span { position: relative; z-index: 1; }
+.btn-ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.45); }
+.btn-ghost:hover { border-color: var(--ember-light); color: var(--ember-light); background: rgba(255,255,255,0.05); }
+
+/* COMPARE BANNER */
+.compare-banner { background: var(--ember); padding: 10px 2rem; text-align: center; }
+.compare-banner p { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); }
+.compare-banner span { opacity: 0.75; font-weight: 400; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,31,26,0.97); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,135,58,0.18); animation: navIn 0.5s ease both; }
+@keyframes navIn { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.nav-brand { text-decoration: none; display: flex; flex-direction: column; }
+.nav-brand-name { font-family: var(--serif); font-size: 1.25rem; color: var(--white); letter-spacing: 0.03em; line-height: 1.1; }
+.nav-brand-tag { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ember); margin-top: 1px; }
+.nav-menu { display: flex; gap: 1.8rem; align-items: center; list-style: none; }
+.nav-menu a { text-decoration: none; color: rgba(255,255,255,0.65); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.06em; transition: color 0.25s; }
+.nav-menu a:hover { color: var(--ember-light); }
+.nav-phone { color: rgba(255,255,255,0.85) !important; font-weight: 500 !important; }
+.nav-cta-btn { background: var(--ember) !important; color: var(--white) !important; padding: 8px 20px; border-radius: var(--r); font-weight: 600 !important; transition: background 0.25s !important; }
+.nav-cta-btn:hover { background: var(--ember-light) !important; }
+
+/* ALERT */
+.alert-bar { background: var(--forest); border-bottom: 2px solid var(--ember); padding: 11px 2rem; text-align: center; margin-top: 68px; }
+.alert-bar p { font-size: 0.8rem; color: rgba(255,255,255,0.8); letter-spacing: 0.04em; }
+.alert-bar strong { color: var(--ember-light); }
+.alert-bar a { color: var(--ember-light); text-decoration: underline; font-weight: 600; }
+
+/* HERO */
+.hero { min-height: 100vh; background: linear-gradient(160deg, rgba(15,31,26,0.97) 0%, rgba(22,40,32,0.93) 50%, rgba(30,56,48,0.9) 100%), radial-gradient(ellipse at 70% 50%, rgba(200,135,58,0.07) 0%, transparent 60%); background-color: var(--forest); position: relative; display: flex; align-items: center; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E"); pointer-events: none; opacity: 0.5; z-index: 0; }
+.hero-accent-line { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, transparent 0%, var(--ember) 25%, var(--ember) 75%, transparent 100%); opacity: 0.7; z-index: 1; }
+.hero-phoenix { position: absolute; right: -80px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; color: rgba(200,135,58,0.055); pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 2; max-width: 1160px; margin: 0 auto; padding: 100px 2rem 80px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 5rem; align-items: center; width: 100%; }
+.hero-left { animation: up 0.9s 0.15s ease both; }
+.hero-right { animation: up 0.9s 0.4s ease both; }
+@keyframes up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+.hero-kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1.6rem; }
+.hero-kicker-dash { width: 32px; height: 1px; background: var(--ember); }
+.hero h1 { color: var(--white); font-weight: 400; margin-bottom: 0.3rem; }
+.hero h1 em { display: block; font-style: italic; color: var(--ember-light); }
+.hero-tagline { font-family: var(--serif); font-size: clamp(1rem, 1.8vw, 1.22rem); font-style: italic; color: rgba(255,255,255,0.4); margin-bottom: 1.6rem; letter-spacing: 0.04em; }
+.hero-desc { color: rgba(255,255,255,0.65); font-size: 1.02rem; max-width: 500px; margin-bottom: 2.5rem; line-height: 1.82; }
+.hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 2.8rem; }
+.hero-signals { display: flex; flex-direction: column; gap: 0.75rem; }
+.signal { display: flex; align-items: flex-start; gap: 10px; }
+.signal-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ember); margin-top: 7px; flex-shrink: 0; }
+.signal-text { font-size: 0.82rem; color: rgba(255,255,255,0.52); line-height: 1.5; }
+.signal-text strong { color: rgba(255,255,255,0.82); font-weight: 500; display: block; }
+
+/* HERO CARD */
+.hero-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,135,58,0.22); border-radius: 8px; padding: 2.5rem 2.2rem; position: relative; backdrop-filter: blur(10px); }
+.hero-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--ember), var(--ember-light), transparent); border-radius: 8px 8px 0 0; }
+.hero-card-ew { margin-bottom: 1.2rem; }
+.hero-card blockquote { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--white); line-height: 1.5; margin-bottom: 1.4rem; }
+.hero-card blockquote em { color: var(--ember-light); font-style: normal; }
+.hero-card-rule { width: 40px; height: 1px; background: var(--ember); margin-bottom: 1.4rem; }
+.hero-card-sig { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.8rem; }
+.hero-card-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--forest-lt), var(--ember)); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.1rem; color: var(--white); font-style: italic; border: 2px solid rgba(200,135,58,0.4); flex-shrink: 0; }
+.hero-card-name { font-family: var(--serif); font-size: 0.98rem; color: var(--white); line-height: 1.2; }
+.hero-card-title { font-size: 0.68rem; color: var(--ember); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 2px; }
+.cnb-badge { background: rgba(200,135,58,0.1); border: 1px solid rgba(200,135,58,0.25); border-radius: var(--r); padding: 0.9rem 1.1rem; margin-bottom: 1.6rem; display: flex; align-items: flex-start; gap: 10px; }
+.cnb-badge-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.cnb-badge-text { font-size: 0.78rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+.cnb-badge-text strong { color: var(--ember-light); display: block; margin-bottom: 2px; }
+.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; padding-top: 1.6rem; border-top: 1px solid rgba(255,255,255,0.07); }
+.hero-stat-num { font-family: var(--serif); font-size: 1.9rem; color: var(--ember-light); line-height: 1; }
+.hero-stat-label { font-size: 0.65rem; color: rgba(255,255,255,0.42); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; line-height: 1.4; }
+.hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; animation: up 1s 1.2s ease both; z-index: 2; }
+.hero-scroll span { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+.hero-scroll-bar { width: 1px; height: 44px; background: linear-gradient(to bottom, rgba(200,135,58,0.6), transparent); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:0.35}50%{opacity:1} }
+
+/* MANIFESTO */
+.manifesto { background: var(--parchment-w); padding: 80px 0; position: relative; overflow: hidden; border-bottom: 1px solid var(--sand); }
+.manifesto::after { content: '\201C'; position: absolute; top: -80px; left: 3%; font-family: var(--serif); font-size: 28rem; color: var(--ember); opacity: 0.035; line-height: 1; pointer-events: none; }
+.manifesto-inner { max-width: 780px; margin: 0 auto; text-align: center; padding: 0 2rem; position: relative; z-index: 1; }
+.manifesto .eyebrow { display: block; margin-bottom: 1.2rem; }
+.manifesto h2 { font-style: italic; font-weight: 400; color: var(--forest); line-height: 1.35; margin-bottom: 1.3rem; font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
+.manifesto h2 em { font-style: normal; color: var(--ember); }
+.manifesto p { color: var(--text-mid); font-size: 1.02rem; max-width: 620px; margin: 0 auto; }
+
+/* CNB STRIP */
+.cnb-strip { background: var(--forest); padding: 28px 0; }
+.cnb-strip-inner { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.cnb-item { display: flex; align-items: center; gap: 12px; }
+.cnb-item-icon { font-size: 1.4rem; }
+.cnb-item-text { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
+.cnb-item-text strong { color: var(--ember-light); display: block; font-size: 0.88rem; }
+.cnb-sep { width: 1px; height: 36px; background: rgba(255,255,255,0.1); }
+
+/* EXPERTISE */
+.expertise { background: var(--white); padding: 90px 0; }
+.section-head { margin-bottom: 3.5rem; }
+.section-head .eyebrow { display: block; margin-bottom: 0.9rem; }
+.section-head h2 { color: var(--forest); margin-bottom: 0.8rem; }
+.section-head p { color: var(--text-mid); max-width: 560px; font-size: 1rem; }
+.exp-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--sand); border: 1px solid var(--sand); border-radius: 8px; overflow: hidden; margin-bottom: 1px; }
+.exp-grid-3 { grid-template-columns: repeat(3,1fr); }
+.exp-card { background: var(--white); padding: 2rem 1.8rem; position: relative; transition: background 0.3s var(--ease); }
+.exp-card:hover { background: var(--parchment); }
+.exp-card::after { content: ''; position: absolute; bottom: 0; left: 1.8rem; right: 1.8rem; height: 2px; background: var(--ember); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
+.exp-card:hover::after { transform: scaleX(1); }
+.exp-icon { font-size: 1.6rem; margin-bottom: 0.9rem; display: block; }
+.exp-card h3 { font-size: 1rem; color: var(--forest); margin-bottom: 0.5rem; font-family: var(--serif); font-weight: 500; line-height: 1.3; }
+.exp-card p { font-size: 0.82rem; color: var(--text-soft); line-height: 1.6; margin-bottom: 1rem; }
+.exp-priority { position: absolute; top: 1rem; right: 1rem; background: var(--ember); color: var(--white); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; }
+.exp-link { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ember); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; transition: gap 0.2s; }
+.exp-link:hover { gap: 10px; }
+
+/* LAWYER */
+.lawyer { background: var(--forest); padding: 100px 0; position: relative; overflow: hidden; }
+.lawyer::before { content: ''; position: absolute; bottom: -300px; left: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(200,135,58,0.05) 0%, transparent 70%); pointer-events: none; }
+.lawyer-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5.5rem; align-items: center; }
+.lawyer-portrait-wrap { position: relative; }
+.lawyer-portrait { width: 100%; aspect-ratio: 3/4; background: linear-gradient(155deg, var(--forest-lt) 0%, #1a3528 100%); border-radius: 6px; position: relative; overflow: hidden; border: 1px solid rgba(200,135,58,0.15); }
+.lawyer-portrait-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
+.portrait-initial { font-family: var(--serif); font-size: 5rem; color: rgba(200,135,58,0.25); line-height: 1; font-style: italic; }
+.portrait-note { font-size: 0.65rem; color: rgba(255,255,255,0.2); letter-spacing: 0.15em; text-transform: uppercase; text-align: center; padding: 0 2rem; line-height: 1.7; }
+.lawyer-badge { position: absolute; bottom: -18px; right: -18px; background: var(--ember); color: var(--white); padding: 1rem 1.3rem; border-radius: var(--r); text-align: center; box-shadow: 0 6px 24px rgba(0,0,0,0.35); }
+.badge-num { font-family: var(--serif); font-size: 2rem; line-height: 1; font-weight: 700; }
+.badge-lbl { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; line-height: 1.4; opacity: 0.9; }
+.lawyer-text .eyebrow { display: block; margin-bottom: 1rem; }
+.lawyer-text h2 { color: var(--white); margin-bottom: 0.3rem; }
+.lawyer-text h2 em { font-style: italic; color: var(--ember-light); }
+.lawyer-sub { font-family: var(--serif); font-style: italic; color: rgba(255,255,255,0.45); font-size: 1rem; margin-bottom: 1.8rem; }
+.lawyer-bio { color: rgba(255,255,255,0.68); font-size: 0.97rem; line-height: 1.82; margin-bottom: 2rem; }
+.lawyer-creds { display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2rem; }
+.cred-row { display: flex; align-items: flex-start; gap: 0.9rem; padding: 0.9rem 1.2rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(200,135,58,0.1); border-left: 3px solid var(--ember); border-radius: var(--r); transition: background 0.25s; }
+.cred-row:hover { background: rgba(255,255,255,0.06); }
+.cred-icon { color: var(--ember); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+.cred-body h4 { font-family: var(--sans); font-size: 0.84rem; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+.cred-body p { font-size: 0.76rem; color: rgba(255,255,255,0.45); line-height: 1.45; }
+.lawyer-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.8rem; margin-bottom: 2rem; }
+.l-stat { text-align: center; padding: 1rem 0.5rem; }
+.l-stat-num { font-family: var(--serif); font-size: 2rem; color: var(--ember); line-height: 1; display: block; }
+.l-stat-lbl { font-size: 0.62rem; color: rgba(255,255,255,0.38); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-top: 4px; line-height: 1.4; }
+
+/* PROCESS */
+.process { background: var(--parchment-w); padding: 90px 0; }
+.process-head { text-align: center; margin-bottom: 4.5rem; }
+.process-head .eyebrow { display: block; margin-bottom: 0.9rem; }
+.process-head h2 { color: var(--forest); }
+.process-track { position: relative; display: grid; grid-template-columns: repeat(5,1fr); }
+.process-track::before { content: ''; position: absolute; top: 32px; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, var(--ember) 0%, var(--ember-light) 50%, var(--ember) 100%); z-index: 0; }
+.process-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 0.8rem; position: relative; z-index: 1; }
+.step-circle { width: 64px; height: 64px; border-radius: 50%; background: var(--white); border: 2px solid var(--ember); display: flex; align-items: center; justify-content: center; margin-bottom: 1.3rem; box-shadow: 0 3px 12px rgba(200,135,58,0.15); transition: all 0.3s; }
+.process-step:hover .step-circle { background: var(--ember); transform: scale(1.08); }
+.step-circle span { font-family: var(--serif); font-size: 1.45rem; color: var(--ember); font-style: italic; transition: color 0.3s; }
+.process-step:hover .step-circle span { color: var(--white); }
+.process-step h4 { font-family: var(--serif); font-size: 1rem; color: var(--forest); margin-bottom: 0.5rem; }
+.process-step p { font-size: 0.78rem; color: var(--text-soft); line-height: 1.55; }
+
+/* FAQ */
+.faq { background: var(--white); padding: 90px 0; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.faq-item { padding: 1.8rem; border: 1px solid var(--sand); border-radius: var(--r); background: var(--parchment); position: relative; transition: border-color 0.3s, box-shadow 0.3s; }
+.faq-item:hover { border-color: var(--ember); box-shadow: 0 3px 18px rgba(200,135,58,0.08); }
+.faq-item h4 { font-family: var(--sans); font-size: 0.88rem; font-weight: 500; color: var(--forest); line-height: 1.5; margin-bottom: 0.65rem; padding-right: 1.5rem; }
+.faq-item p { font-size: 0.82rem; color: var(--text-soft); line-height: 1.65; }
+.faq-plus { position: absolute; top: 1.4rem; right: 1.4rem; color: var(--ember); font-size: 1.1rem; font-weight: 300; }
+.faq-note { text-align: center; margin-top: 2.5rem; font-size: 0.74rem; color: var(--text-soft); font-style: italic; }
+
+/* TESTIMONIALS */
+.testimonials { background: var(--forest); padding: 90px 0; position: relative; overflow: hidden; }
+.testimonials::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--ember), transparent); }
+.t-head { text-align: center; margin-bottom: 3.5rem; }
+.t-head .eyebrow { display: block; margin-bottom: 0.9rem; }
+.t-head h2 { color: var(--white); }
+.t-head p { color: rgba(255,255,255,0.45); margin-top: 0.6rem; font-size: 0.95rem; }
+.t-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-bottom: 3rem; }
+.t-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(200,135,58,0.14); border-radius: 6px; padding: 2rem 1.8rem; position: relative; transition: background 0.3s, border-color 0.3s; }
+.t-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(200,135,58,0.3); }
+.t-card::before { content: '\201C'; position: absolute; top: 0.8rem; right: 1.3rem; font-family: var(--serif); font-size: 3.5rem; color: var(--ember); opacity: 0.18; line-height: 1; }
+.t-stars { color: var(--ember); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 0.9rem; }
+.t-text { font-family: var(--serif); font-style: italic; font-size: 0.98rem; color: rgba(255,255,255,0.75); line-height: 1.65; margin-bottom: 1.3rem; }
+.t-author { display: flex; align-items: center; gap: 0.75rem; }
+.t-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--forest-lt), rgba(200,135,58,0.5)); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 0.95rem; color: rgba(255,255,255,0.65); border: 1px solid rgba(200,135,58,0.2); flex-shrink: 0; }
+.t-name { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.7); }
+.t-case { font-size: 0.68rem; color: var(--ember); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 2px; }
+.trust-row { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.trust-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.38); font-size: 0.76rem; letter-spacing: 0.07em; text-transform: uppercase; }
+.trust-item-icon { color: var(--ember); font-size: 1rem; }
+
+/* NEWS */
+.news-strip { background: var(--parchment-w); padding: 70px 0; border-top: 1px solid var(--sand); }
+.news-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+.news-head h2 { color: var(--forest); }
+.news-head a { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ember); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; transition: gap 0.2s; }
+.news-head a:hover { gap: 10px; }
+.news-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.news-card { background: var(--white); border: 1px solid var(--sand); border-radius: 6px; overflow: hidden; transition: box-shadow 0.3s; }
+.news-card:hover { box-shadow: 0 6px 24px rgba(15,31,26,0.1); }
+.news-card-img { height: 150px; background: var(--forest-lt); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+.news-card-body { padding: 1.5rem; }
+.news-card-date { font-size: 0.68rem; color: var(--ember); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+.news-card h4 { font-family: var(--serif); font-size: 1rem; color: var(--forest); line-height: 1.35; margin-bottom: 0.6rem; }
+.news-card p { font-size: 0.82rem; color: var(--text-soft); line-height: 1.6; }
+
+/* CONTACT */
+.contact { background: var(--parchment); padding: 90px 0; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 4.5rem; align-items: start; }
+.contact-info .eyebrow { display: block; margin-bottom: 0.9rem; }
+.contact-info h2 { color: var(--forest); margin-bottom: 0.8rem; }
+.contact-info h2 em { font-style: italic; color: var(--ember); }
+.contact-info > p { color: var(--text-mid); margin-bottom: 2.2rem; line-height: 1.78; }
+.contact-locs { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 2rem; }
+.loc-card { padding: 1.2rem 1.4rem; background: var(--white); border: 1px solid var(--sand); border-left: 3px solid var(--ember); border-radius: var(--r); }
+.loc-card h4 { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ember); margin-bottom: 0.4rem; }
+.loc-card p { font-size: 0.88rem; color: var(--text-dark); line-height: 1.6; }
+.loc-note { font-size: 0.74rem; color: var(--text-soft); margin-top: 3px; }
+.contact-direct { display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2rem; }
+.contact-link { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; padding: 0.85rem 1.1rem; background: var(--white); border: 1px solid var(--sand); border-radius: var(--r); transition: border-color 0.25s; }
+.contact-link:hover { border-color: var(--ember); }
+.contact-link-icon { width: 36px; height: 36px; border: 1px solid var(--ember); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ember); font-size: 0.9rem; flex-shrink: 0; }
+.contact-link-text h5 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-soft); margin-bottom: 2px; }
+.contact-link-text p { font-size: 0.88rem; color: var(--forest); font-weight: 500; }
+.urgency-note { background: var(--forest); padding: 1.3rem 1.5rem; border-radius: var(--r); border-left: 3px solid var(--ember); }
+.urgency-note p { font-size: 0.84rem; color: rgba(255,255,255,0.68); line-height: 1.6; }
+.urgency-note strong { color: var(--ember-light); }
+.contact-form-wrap { background: var(--white); padding: 2.8rem 2.6rem; border-radius: 8px; border: 1px solid var(--sand); box-shadow: 0 6px 32px rgba(15,31,26,0.07); }
+.contact-form-wrap h3 { font-size: 1.5rem; color: var(--forest); margin-bottom: 0.4rem; }
+.contact-form-wrap > p { font-size: 0.84rem; color: var(--text-soft); margin-bottom: 1.8rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.form-group { margin-bottom: 1.1rem; }
+.form-group label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 5px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--sand); border-radius: var(--r); font-family: var(--sans); font-size: 0.9rem; color: var(--text-dark); background: var(--parchment); transition: border-color 0.25s; outline: none; appearance: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--ember); background: var(--white); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-legal { font-size: 0.7rem; color: var(--text-soft); margin-bottom: 1.3rem; line-height: 1.55; }
+.rdv-options { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.6rem; margin-bottom: 1.5rem; }
+.rdv-opt { border: 1px solid var(--sand); border-radius: var(--r); padding: 0.7rem 0.5rem; text-align: center; cursor: pointer; transition: all 0.25s; text-decoration: none; display: block; }
+.rdv-opt:hover { border-color: var(--ember); background: var(--parchment); }
+.rdv-opt-icon { font-size: 1.1rem; display: block; margin-bottom: 3px; }
+.rdv-opt-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-mid); display: block; line-height: 1.3; }
+.rdv-opt-note { font-size: 0.62rem; color: var(--text-soft); display: block; margin-top: 1px; }
+
+/* FOOTER */
+footer { background: var(--forest); padding: 56px 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+.footer-brand-name { font-family: var(--serif); font-size: 1.5rem; color: var(--white); margin-bottom: 3px; }
+.footer-brand-tag { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember); margin-bottom: 1rem; display: block; }
+.footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.42); line-height: 1.7; max-width: 270px; }
+.footer-col h5 { font-family: var(--sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember); margin-bottom: 1.1rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.footer-col a { color: rgba(255,255,255,0.42); text-decoration: none; font-size: 0.83rem; transition: color 0.25s; }
+.footer-col a:hover { color: var(--ember-light); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 0.5rem; }
+.footer-bottom p { color: rgba(255,255,255,0.25); font-size: 0.72rem; }
+
+/* AUDIT */
+.audit-section { background: #f5f0e8; padding: 70px 0; border-top: 4px solid var(--ember); }
+.audit-section .container > h2 { font-family: var(--sans); font-size: 1.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--forest); margin-bottom: 0.5rem; }
+.audit-section .container > p { font-size: 0.88rem; color: var(--text-soft); margin-bottom: 2.5rem; }
+.audit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.audit-col { background: var(--white); border-radius: 8px; padding: 2rem; border: 1px solid var(--sand); }
+.audit-col-before { border-top: 3px solid #c44; }
+.audit-col-after { border-top: 3px solid #3a9; }
+.audit-col h4 { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.2rem; }
+.audit-col-before h4 { color: #c44; }
+.audit-col-after h4 { color: #3a9; }
+.audit-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.audit-col li { font-size: 0.84rem; color: var(--text-mid); padding-left: 1.2rem; position: relative; line-height: 1.5; }
+.audit-col-before li::before { content: '\2717'; position: absolute; left: 0; color: #c44; font-size: 0.75rem; }
+.audit-col-after li::before { content: '\2713'; position: absolute; left: 0; color: #3a9; font-size: 0.75rem; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .exp-grid { grid-template-columns: repeat(2,1fr); }
+  .exp-grid-3 { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .lawyer-grid { grid-template-columns: 1fr; }
+  .lawyer-portrait-wrap { display: none; }
+  .t-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .audit-grid { grid-template-columns: 1fr; }
+  .process-track { grid-template-columns: repeat(3,1fr); }
+  .process-track::before { display: none; }
+  nav .nav-menu li:not(:last-child):not(.nav-phone-li) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- COMPARE BANNER — supprimer en production -->
+<div class="compare-banner">
+  <p>✦ Maquette de refonte — Plume de Phoenix v2 <span>· Données réelles intégrées depuis www.plumedephoenix.com</span></p>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <span class="nav-brand-name">Plume de Phoenix</span>
+      <span class="nav-brand-tag">Avocat de la résilience 🔥</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#expertises">Expertises</a></li>
+      <li><a href="#avocat">Maître Pannagas</a></li>
+      <li><a href="#demarche">Démarche</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="nav-phone-li"><a href="tel:0177020455" class="nav-phone">01 77 02 04 55</a></li>
+      <li><a href="#contact" class="nav-cta-btn">Consultation gratuite</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ALERT BAR -->
+<div class="alert-bar">
+  <p>⏱ <strong>Délai de prescription :</strong> Vos droits peuvent s'éteindre. <a href="#contact">Première consultation — contactez-nous dès maintenant.</a></p>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="accueil">
+  <div class="hero-accent-line" aria-hidden="true"></div>
+  <svg class="hero-phoenix" viewBox="0 0 300 300" fill="none" aria-hidden="true">
+    <path d="M150 270 C90 230 30 180 45 120 C60 60 120 45 150 15 C180 45 240 60 255 120 C270 180 210 230 150 270Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <path d="M150 15 L130 80 L150 65 L170 80Z" stroke="currentColor" stroke-width="1" fill="none"/>
+    <path d="M45 120 L105 140 L90 155 L100 175Z" stroke="currentColor" stroke-width="1" fill="none"/>
+    <path d="M255 120 L195 140 L210 155 L200 175Z" stroke="currentColor" stroke-width="1" fill="none"/>
+    <circle cx="150" cy="150" r="18" stroke="currentColor" stroke-width="1" fill="none"/>
+    <circle cx="150" cy="150" r="6" stroke="currentColor" stroke-width="0.75" fill="none"/>
+    <line x1="150" y1="132" x2="150" y2="108" stroke="currentColor" stroke-width="0.75"/>
+    <line x1="150" y1="168" x2="150" y2="192" stroke="currentColor" stroke-width="0.75"/>
+    <line x1="132" y1="150" x2="108" y2="150" stroke="currentColor" stroke-width="0.75"/>
+    <line x1="168" y1="150" x2="192" y2="150" stroke="currentColor" stroke-width="0.75"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">
+        <div class="hero-kicker-dash" aria-hidden="true"></div>
+        <span class="eyebrow">Avocate spécialiste · Dommage corporel · CNB</span>
+      </div>
+      <h1>Vous avez été victime.<br><em>Nous vous défendons.</em></h1>
+      <p class="hero-tagline">— Avocat de la résilience —</p>
+      <p class="hero-desc">Maître Swéta Pannagas défend exclusivement les victimes d'accidents graves, de traumatismes, d'infractions et leurs familles. Depuis plus de 15 ans, elle porte la voix de ceux qui ont du mal à mettre des mots sur leurs souffrances.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-ember"><span>Consultation gratuite</span><span>→</span></a>
+        <a href="#expertises" class="btn btn-ghost">Nos domaines d'action</a>
+      </div>
+      <div class="hero-signals">
+        <div class="signal">
+          <div class="signal-dot"></div>
+          <div class="signal-text"><strong>Spécialiste CNB — titre protégé</strong>Reconnue par le Conseil National des Barreaux · qualification accidents de la route</div>
+        </div>
+        <div class="signal">
+          <div class="signal-dot"></div>
+          <div class="signal-text"><strong>Exclusivement au service des victimes</strong>Aucun dossier côté assureur · Indépendance et engagement total</div>
+        </div>
+        <div class="signal">
+          <div class="signal-dot"></div>
+          <div class="signal-text"><strong>France entière, Dom-Tom &amp; international</strong>Enghien-les-Bains · 11 av. de l'Opéra Paris · Visioconférence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="hero-card">
+        <div class="hero-card-ew"><span class="eyebrow">Maître Swéta Pannagas</span></div>
+        <blockquote>« Je porte la voix de ceux qui, atteints dans leur chair, ont du mal à mettre des mots sur leurs <em>souffrances</em>. »</blockquote>
+        <div class="hero-card-rule"></div>
+        <div class="hero-card-sig">
+          <div class="hero-card-avatar">SP</div>
+          <div>
+            <div class="hero-card-name">Maître Swéta Pannagas</div>
+            <div class="hero-card-title">Avocate · Barreau de Paris</div>
+          </div>
+        </div>
+        <div class="cnb-badge">
+          <span class="cnb-badge-icon">🏛️</span>
+          <div class="cnb-badge-text">
+            <strong>Spécialiste CNB en dommage corporel</strong>
+            Titre protégé · qualification spécifique accidents de la route. Attention aux faux spécialistes.
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-num">15+</div><div class="hero-stat-label">Ans d'expérience</div></div>
+          <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Côté victimes</div></div>
+          <div><div class="hero-stat-num">🌍</div><div class="hero-stat-label">France &amp; étranger</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Découvrir</span>
+    <div class="hero-scroll-bar"></div>
+  </div>
+</header>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <span class="eyebrow">Notre engagement</span>
+    <h2>Un accident, c'est un avant et un après.<br><em>Vous ne devriez pas traverser ça seul.</em></h2>
+    <p>Plume de Phoenix est un cabinet d'avocat spécialiste dans la défense des victimes d'accidents et d'infractions — engagé, humaniste, cultivant l'excellence, la bienveillance et la ténacité. Présent dans toute la France et à l'international.</p>
+  </div>
+</section>
+
+<!-- CNB STRIP -->
+<div class="cnb-strip">
+  <div class="cnb-strip-inner">
+    <div class="cnb-item"><span class="cnb-item-icon">🏛️</span><div class="cnb-item-text"><strong>Spécialiste CNB (titre protégé)</strong>Conseil National des Barreaux</div></div>
+    <div class="cnb-sep"></div>
+    <div class="cnb-item"><span class="cnb-item-icon">🎓</span><div class="cnb-item-text"><strong>Diplômée traumatisme crânien</strong>Enfant, adolescent &amp; bébé secoué</div></div>
+    <div class="cnb-sep"></div>
+    <div class="cnb-item"><span class="cnb-item-icon">⚖️</span><div class="cnb-item-text"><strong>15+ ans d'expérience</strong>Exclusivement au service des victimes</div></div>
+    <div class="cnb-sep"></div>
+    <div class="cnb-item"><span class="cnb-item-icon">🌍</span><div class="cnb-item-text"><strong>France entière &amp; international</strong>Enghien · Paris · Dom-Tom · Visio</div></div>
+  </div>
+</div>
+
+<!-- EXPERTISES -->
+<section class="expertise" id="expertises">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Domaines d'intervention</span>
+      <h2>Une défense spécialisée<br><em style="font-style:italic;color:var(--ember)">pour chaque victime</em></h2>
+      <p>Maître Pannagas défend toutes les victimes de dommages corporels graves, des accidents les plus courants aux situations les plus complexes et sensibles.</p>
+    </div>
+
+    <div class="exp-grid">
+      <article class="exp-card">
+        <div class="exp-priority">Priorité</div>
+        <span class="exp-icon">🚗</span>
+        <h3>Accident de la route grave</h3>
+        <p>Victimes de collisions, piétons renversés, passagers blessés. Loi Badinter, FGAO, indemnisation maximale.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <div class="exp-priority">Priorité</div>
+        <span class="exp-icon">🧠</span>
+        <h3>Traumatisme crânien</h3>
+        <p>Séquelles cognitives invisibles, expertise médicale contradictoire, indemnisation tierce personne et aidants.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">👶</span>
+        <h3>Syndrome du bébé secoué</h3>
+        <p>Diplôme spécifique. Défense des tout-petits victimes de violences. Accompagnement des familles.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">🔥</span>
+        <h3>Grands brûlés &amp; familles</h3>
+        <p>Indemnisation des victimes de brûlures graves. Victimes françaises à l'étranger (Crans-Montana).</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+    </div>
+
+    <div class="exp-grid">
+      <article class="exp-card">
+        <span class="exp-icon">🏥</span>
+        <h3>Accident médical</h3>
+        <p>Erreurs médicales, infections nosocomiales, responsabilité hospitalière, recours ONIAM.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">⚖️</span>
+        <h3>Victimes d'infractions</h3>
+        <p>Agressions, homicides, viols, soumission chimique. Partie civile, FGTI, réparation intégrale.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">🌸</span>
+        <h3>Féminicide &amp; violences VIF/VSS</h3>
+        <p>Violences intrafamiliales, conjugales, sexuelles. Accompagnement des survivantes et des familles.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">💼</span>
+        <h3>Accident du travail</h3>
+        <p>Faute inexcusable de l'employeur, indemnisation complémentaire au-delà des prestations sociales.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+    </div>
+
+    <div class="exp-grid exp-grid-3">
+      <article class="exp-card">
+        <span class="exp-icon">🎿</span>
+        <h3>Accidents de ski</h3>
+        <p>Collisions sur les pistes, remontées mécaniques, domaine skiable. France et international.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">💣</span>
+        <h3>Victimes d'attentats</h3>
+        <p>Terrorisme en France et à l'étranger. FGTI, UNCA, accompagnement psycho-traumatologique.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+      <article class="exp-card">
+        <span class="exp-icon">✈️</span>
+        <h3>Accidents France &amp; étranger</h3>
+        <p>Victimes françaises à l'étranger, accidents individuels ou collectifs, droit international.</p>
+        <a href="#contact" class="exp-link">Nous contacter →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LAWYER -->
+<section class="lawyer" id="avocat">
+  <div class="container">
+    <div class="lawyer-grid">
+      <div class="lawyer-portrait-wrap" aria-hidden="true">
+        <div class="lawyer-portrait">
+          <div class="lawyer-portrait-inner">
+            <div class="portrait-initial">SP</div>
+            <p class="portrait-note">Photo professionnelle<br>Maître Swéta Pannagas<br>Format 3:4 · fond neutre</p>
+          </div>
+        </div>
+        <div class="lawyer-badge">
+          <div class="badge-num">15+</div>
+          <div class="badge-lbl">Ans au service<br>des victimes</div>
+        </div>
+      </div>
+
+      <div class="lawyer-text">
+        <span class="eyebrow">Votre avocate</span>
+        <h2>Maître <em>Swéta Pannagas</em></h2>
+        <p class="lawyer-sub">Avocate spécialiste en dommage corporel · Barreau de Paris</p>
+        <p class="lawyer-bio">Depuis plus de 15 ans, Maître Pannagas consacre sa pratique exclusivement à la défense des victimes. Reconnue <strong style="color:var(--ember-light)">spécialiste en dommage corporel par le Conseil National des Barreaux</strong> (titre protégé, avec qualification spécifique accidents de la route), elle porte la voix de ceux qui, atteints dans leur chair et leur sang, ont du mal à mettre des mots sur leurs souffrances.<br><br>Elle est également diplômée en traumatisme crânien, spécifiquement de l'enfant, l'adolescent et le syndrome du bébé secoué. Le cabinet intervient dans toute la France, les Dom-Tom, et à l'international.</p>
+        <div class="lawyer-creds">
+          <div class="cred-row"><span class="cred-icon">🏛️</span><div class="cred-body"><h4>Spécialiste CNB — titre protégé</h4><p>Qualification spécifique accidents de la route · Conseil National des Barreaux</p></div></div>
+          <div class="cred-row"><span class="cred-icon">🎓</span><div class="cred-body"><h4>Diplômée en traumatisme crânien</h4><p>Enfant, adolescent, syndrome du bébé secoué — formation spécifique</p></div></div>
+          <div class="cred-row"><span class="cred-icon">⚖️</span><div class="cred-body"><h4>Exclusivement au service des victimes</h4><p>Aucun dossier côté assureur ou défense — indépendance et engagement total</p></div></div>
+          <div class="cred-row"><span class="cred-icon">🤝</span><div class="cred-body"><h4>Honoraires adaptés à chaque situation</h4><p>Solutions sur mesure, honoraires de résultat, accessibilité financière pour les victimes</p></div></div>
+        </div>
+        <div class="lawyer-stats">
+          <div class="l-stat"><span class="l-stat-num">15+</span><span class="l-stat-lbl">Années d'expérience</span></div>
+          <div class="l-stat"><span class="l-stat-num">100%</span><span class="l-stat-lbl">Dédié aux victimes</span></div>
+          <div class="l-stat"><span class="l-stat-num">🌍</span><span class="l-stat-lbl">France &amp; international</span></div>
+          <div class="l-stat"><span class="l-stat-num">CNB</span><span class="l-stat-lbl">Titre protégé</span></div>
+        </div>
+        <a href="#contact" class="btn btn-ember"><span>Prendre rendez-vous</span><span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="demarche">
+  <div class="container">
+    <div class="process-head">
+      <span class="eyebrow">Notre démarche</span>
+      <h2>Votre accompagnement, <em style="font-style:italic">étape par étape</em></h2>
+    </div>
+    <ol class="process-track">
+      <li class="process-step">
+        <div class="step-circle"><span>1</span></div>
+        <h4>Contact gratuit</h4>
+        <p>Échange confidentiel pour évaluer votre dossier, sans frais ni engagement.</p>
+      </li>
+      <li class="process-step">
+        <div class="step-circle"><span>2</span></div>
+        <h4>Analyse du dossier</h4>
+        <p>Collecte des pièces médicales, de police et assurance pour un dossier solide.</p>
+      </li>
+      <li class="process-step">
+        <div class="step-circle"><span>3</span></div>
+        <h4>Expertise médicale</h4>
+        <p>Présence à vos côtés lors des expertises pour défendre votre préjudice réel.</p>
+      </li>
+      <li class="process-step">
+        <div class="step-circle"><span>4</span></div>
+        <h4>Négociation / Tribunal</h4>
+        <p>Négociation ferme ou procédure judiciaire pour obtenir la juste indemnisation.</p>
+      </li>
+      <li class="process-step">
+        <div class="step-circle"><span>5</span></div>
+        <h4>Réparation intégrale</h4>
+        <p>Versement de l'indemnité complète — corporel, moral, économique, futur.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Vos questions, <em style="font-style:italic;color:var(--ember)">nos réponses</em></h2>
+      <p>Ce que nous demandent le plus souvent les victimes et leurs proches.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Combien puis-je obtenir après un accident de la route grave ?</h4><p>L'indemnisation dépend des préjudices : déficit fonctionnel, perte de revenus, préjudice moral, soins futurs… Elle peut être bien supérieure à l'offre initiale de l'assureur.</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>L'assurance m'a fait une offre — dois-je accepter ?</h4><p>Non, jamais sans avis d'un avocat spécialisé. Les premières offres des assureurs sous-évaluent systématiquement les préjudices. Un spécialiste CNB obtient généralement bien plus.</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Qu'est-ce que le titre de spécialiste CNB ?</h4><p>Titre protégé délivré par le Conseil National des Barreaux. Maître Pannagas est reconnue spécialiste en dommage corporel avec qualification accidents de la route — un gage de sérieux unique.</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Comment prouver les séquelles d'un traumatisme crânien ?</h4><p>Par des bilans neuropsychologiques, IRM fonctionnels et un médecin conseil. Notre spécialité : documenter et défendre les séquelles cognitives peu visibles mais invalidantes.</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Mon bébé a été secoué — que faire en urgence ?</h4><p>Consultez immédiatement les urgences et demandez un scanner. Contactez-nous rapidement : la prescription commence tôt et il faut préserver toutes les preuves médicales.</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Intervenez-vous pour des victimes françaises à l'étranger ?</h4><p>Oui. Maître Pannagas intervient pour les victimes françaises accidentées à l'étranger, y compris dans des affaires collectives (victimes de Crans-Montana).</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Quels sont vos honoraires ?</h4><p>Solutions adaptées à chaque situation, y compris des honoraires de résultat pour les victimes sans moyens d'avance. Première consultation toujours gratuite.</p></div>
+      <div class="faq-item"><span class="faq-plus">+</span><h4>Quel est le délai de prescription pour agir ?</h4><p>Variable selon les cas — en général 10 ans à compter de la consolidation, mais certains délais sont plus courts. Ne tardez pas à consulter pour préserver vos droits.</p></div>
+    </div>
+    <p class="faq-note">Ces réponses sont informatives. Chaque situation est unique — consultez Maître Pannagas pour une analyse personnalisée.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — real quotes from plumedephoenix.com -->
+<section class="testimonials" id="temoignages">
+  <div class="container">
+    <div class="t-head">
+      <span class="eyebrow">Témoignages clients</span>
+      <h2>Ils nous ont fait confiance</h2>
+      <p>Les mots de nos clients sont notre plus belle récompense.</p>
+    </div>
+    <div class="t-grid">
+      <article class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <blockquote class="t-text">« Maître Pannagas est tout simplement une avocate d'exception. Elle est restée patiente, positive, encourageante, à l'écoute et surtout pugnace avec intelligence. C'est grâce à elle que je peux enfin recouvrer dignité et liberté à 50 ans. »</blockquote>
+        <div class="t-author"><div class="t-avatar">I</div><div><div class="t-name">Isabelle G.</div><div class="t-case">Victime · Procédure longue et complexe</div></div></div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <blockquote class="t-text">« Je n'avais pas beaucoup de moyens. L'avocate a trouvé une solution pour que je la paye en partie après le résultat. Je n'ai jamais cru que j'allais gagner autant d'argent ! C'est vraiment une très bonne avocate qui comprend bien les victimes. »</blockquote>
+        <div class="t-author"><div class="t-avatar">V</div><div><div class="t-name">Vaira TH.</div><div class="t-case">Victime d'agression · Paris</div></div></div>
+      </article>
+      <article class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <blockquote class="t-text">« Swéta Pannagas est très professionnelle, tenace, qui va au fond des dossiers, ce qui a permis de découvrir des informations qui ont eu des conséquences très positives. Je me félicite d'avoir changé d'avocat. Je recommande. »</blockquote>
+        <div class="t-author"><div class="t-avatar">C</div><div><div class="t-name">Christiane H.</div><div class="t-case">Dommage corporel · Dossier complexe</div></div></div>
+      </article>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><span class="trust-item-icon">🏛️</span> Barreau de Paris</div>
+      <div class="trust-item"><span class="trust-item-icon">⚖️</span> Spécialiste CNB</div>
+      <div class="trust-item"><span class="trust-item-icon">🔒</span> RGPD conforme</div>
+      <div class="trust-item"><span class="trust-item-icon">♿</span> Cabinet accessible PMR</div>
+      <div class="trust-item"><span class="trust-item-icon">🌍</span> France &amp; international</div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS — real articles -->
+<section class="news-strip">
+  <div class="container">
+    <div class="news-head">
+      <h2>Actualités <em style="font-style:italic;color:var(--ember)">&amp; médias</em></h2>
+      <a href="#">Toutes les actualités →</a>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-card-img">⚖️</div>
+        <div class="news-card-body">
+          <div class="news-card-date">15 Janvier 2026</div>
+          <h4>Démarches judiciaires — victimes françaises de Crans-Montana</h4>
+          <p>Vidéo explicative : les démarches juridiques pour l'accompagnement des familles françaises victimes du drame.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-img">👶</div>
+        <div class="news-card-body">
+          <div class="news-card-date">18 Novembre 2025</div>
+          <h4>Le syndrome du bébé secoué détruit des vies en quelques secondes</h4>
+          <p>Comprendre la violence du geste, les lésions irréversibles et les recours judiciaires disponibles.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-img">🧠</div>
+        <div class="news-card-body">
+          <div class="news-card-date">7 Novembre 2025</div>
+          <h4>Y a-t-il une justice pour les bébés secoués ?</h4>
+          <p>Des centaines de bébés secoués chaque année. Maître Pannagas s'engage dans leur défense exclusive.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT — real addresses, phone, email -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Prenez contact</span>
+        <h2>Parlons de <em>votre situation</em></h2>
+        <p>La première étape est souvent la plus difficile. Notre équipe est à votre écoute pour analyser votre dossier et vous orienter — en toute confidentialité, sans engagement.</p>
+        <div class="contact-locs">
+          <div class="loc-card">
+            <h4>🏠 Cabinet principal — Val d'Oise</h4>
+            <p>3 rue Blanche – RDC<br>95880 Enghien-les-Bains</p>
+            <p class="loc-note">♿ Accessible aux personnes en situation de handicap</p>
+          </div>
+          <div class="loc-card">
+            <h4>🗼 Adresse parisienne</h4>
+            <p>11 Avenue de l'Opéra<br>75001 Paris</p>
+            <p class="loc-note">Sur rendez-vous uniquement</p>
+          </div>
+        </div>
+        <div class="contact-direct">
+          <a href="tel:0177020455" class="contact-link">
+            <div class="contact-link-icon">📞</div>
+            <div class="contact-link-text"><h5>Téléphone</h5><p>01 77 02 04 55</p></div>
+          </a>
+          <a href="mailto:contact@plumedephoenix.com" class="contact-link">
+            <div class="contact-link-icon">✉️</div>
+            <div class="contact-link-text"><h5>Email</h5><p>contact@plumedephoenix.com</p></div>
+          </a>
+        </div>
+        <div class="urgency-note">
+          <p>⚠️ <strong>Délai de prescription :</strong> Certains délais courent dès l'accident. Ne tardez pas — consultez-nous pour préserver vos droits.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3>Demande de consultation</h3>
+        <p>Réponse sous 24h. Première consultation gratuite.</p>
+        <div style="margin-bottom:1.3rem">
+          <label style="display:block;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-mid);margin-bottom:0.6rem">Mode de consultation souhaité</label>
+          <div class="rdv-options">
+            <a href="https://consultation.avocat.fr/avocat-enghien-les-bains/sweta-pannagas-7548.html" class="rdv-opt">
+              <span class="rdv-opt-icon">🏠</span>
+              <span class="rdv-opt-label">Cabinet</span>
+              <span class="rdv-opt-note">Enghien / Paris</span>
+            </a>
+            <a href="https://consultation.avocat.fr/avocat-enghien-les-bains/sweta-pannagas-7548.html" class="rdv-opt">
+              <span class="rdv-opt-icon">💻</span>
+              <span class="rdv-opt-label">Visioconférence</span>
+              <span class="rdv-opt-note">France &amp; international</span>
+            </a>
+            <a href="tel:0177020455" class="rdv-opt">
+              <span class="rdv-opt-icon">📞</span>
+              <span class="rdv-opt-label">Téléphone</span>
+              <span class="rdv-opt-note">01 77 02 04 55</span>
+            </a>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" placeholder="Votre prénom" required></div>
+          <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" placeholder="Votre nom" required></div>
+        </div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" placeholder="votre@email.fr" required></div>
+        <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" placeholder="06 XX XX XX XX"></div>
+        <div class="form-group">
+          <label for="situation">Type de situation *</label>
+          <select id="situation" required>
+            <option value="" disabled selected>Sélectionnez votre situation</option>
+            <option>Accident de la route grave</option>
+            <option>Traumatisme crânien</option>
+            <option>Syndrome du bébé secoué</option>
+            <option>Grands brûlés</option>
+            <option>Accident médical</option>
+            <option>Victime d'infraction / agression</option>
+            <option>Féminicide / VIF / VSS</option>
+            <option>Accident du travail</option>
+            <option>Accident de ski</option>
+            <option>Victime d'attentat</option>
+            <option>Accident à l'étranger</option>
+            <option>Autre situation</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="message">Votre message</label><textarea id="message" placeholder="Décrivez brièvement votre situation…"></textarea></div>
+        <p class="form-legal">Vos données sont utilisées uniquement pour répondre à votre demande, conformément au RGPD. Couvert par le secret professionnel de l'avocat.</p>
+        <button type="submit" class="btn btn-ember" style="width:100%;justify-content:center;"><span>Envoyer ma demande</span><span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Plume de Phoenix</div>
+        <span class="footer-brand-tag">Avocat de la résilience 🔥</span>
+        <p>Cabinet spécialiste dans la défense des victimes d'accidents et d'infractions. Engagé, humaniste, cultivant l'excellence, la bienveillance et la ténacité.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Nos expertises</h5>
+        <ul>
+          <li><a href="#">Accident de la route grave</a></li>
+          <li><a href="#">Traumatisme crânien</a></li>
+          <li><a href="#">Syndrome bébé secoué</a></li>
+          <li><a href="#">Grands brûlés</a></li>
+          <li><a href="#">Accident médical</a></li>
+          <li><a href="#">Victimes d'infractions</a></li>
+          <li><a href="#">Féminicide &amp; VIF/VSS</a></li>
+          <li><a href="#">Accidents à l'étranger</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Cabinet</h5>
+        <ul>
+          <li><a href="#">Maître Pannagas</a></li>
+          <li><a href="#">Satisfaction clients</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Actualités &amp; médias</a></li>
+          <li><a href="#">Les honoraires</a></li>
+          <li><a href="#">Recrutement</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Plume de Phoenix · Maître Swéta Pannagas · Avocate au Barreau de Paris · 3 rue Blanche, 95880 Enghien-les-Bains · 01 77 02 04 55</p>
+      <p><a href="#" style="color:rgba(255,255,255,0.25);text-decoration:none">Mentions légales</a> · <a href="#" style="color:rgba(255,255,255,0.25);text-decoration:none">Cookies</a> · RGPD</p>
+    </div>
+  </div>
+</footer>
+
+<!-- AUDIT BEFORE/AFTER — supprimer en production -->
+<aside class="audit-section">
+  <div class="container">
+    <h2>📊 Audit comparatif — Avant / Après</h2>
+    <p>Comparaison entre www.plumedephoenix.com (site actuel) et cette maquette de refonte. À supprimer avant mise en ligne.</p>
+    <div class="audit-grid">
+      <div class="audit-col audit-col-before">
+        <h4>✗ Site actuel — Points faibles identifiés</h4>
+        <ul>
+          <li>Template CMS Agoraline daté, look années 2015</li>
+          <li>Hero : carrousel de texte sans impact émotionnel</li>
+          <li>Icônes de service minuscules (60×60px) non impactantes</li>
+          <li>Navigation surchargée — plus de 10 items déroulants</li>
+          <li>Titre CNB (avantage clé) non mis en avant dès la home</li>
+          <li>Aucune alerte prescription / urgence visible</li>
+          <li>Témoignages en carrousel peu lisible, peu crédible</li>
+          <li>Adresses non structurées pour le SEO local</li>
+          <li>Pas de Schema.org LegalService implémenté</li>
+          <li>Google Business Profile Enghien + Paris à optimiser</li>
+          <li>Mobile : expérience non optimisée</li>
+          <li>Performance : images non compressées, LCP lent</li>
+          <li>Tagline "Avocat de la résilience" absente de la home</li>
+          <li>Pas de différenciation visuelle entre spécialités prioritaires</li>
+        </ul>
+      </div>
+      <div class="audit-col audit-col-after">
+        <h4>✓ Cette maquette — Améliorations apportées</h4>
+        <ul>
+          <li>Design éditorial moderne, palette forêt + braise mémorable</li>
+          <li>Hero émotionnel centré victime + vraie citation de Maître Pannagas</li>
+          <li>Titre CNB mis en avant dès le hero, le strip et la section avocat</li>
+          <li>Tagline "Avocat de la résilience 🔥" intégrée dans la marque</li>
+          <li>Alerte prescription en barre haute — urgence immédiate</li>
+          <li>11 spécialités présentées avec "Priorité" sur accidents route + TC</li>
+          <li>Vraies adresses Enghien + Paris Opéra pour SEO local Google</li>
+          <li>3 modes de RDV dans le formulaire (cabinet / visio / tél)</li>
+          <li>Vrais témoignages intégrés (Isabelle G., Vaira TH., Christiane H.)</li>
+          <li>Vrais articles d'actualité (Crans-Montana, bébé secoué)</li>
+          <li>FAQ SEO ciblée sur les priorités (accidents route + traumatismes)</li>
+          <li>Navigation allégée — 6 items + téléphone cliquable</li>
+          <li>Footer avec toutes les expertises pour maillage interne SEO</li>
+          <li>100% responsive mobile-first</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</aside>
+
+</body>
+</html>
